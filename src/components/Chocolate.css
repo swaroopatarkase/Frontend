@@ -1,0 +1,80 @@
+.chocolate-card {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 16px; 
+    margin: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .chocolate-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .chocolate-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .chocolate-details {
+    flex-grow: 1;
+  }
+  
+  .chocolate-id {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .chocolate-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .chocolate-description, .chocolate-price {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .Delete-btn, .Edit-btn {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    padding: 8px 16px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .Delete-btn:hover {
+    background-color: #ddd; 
+    color: red; 
+  }
+  
+  .Edit-btn:hover {
+    background-color: #ddd; 
+    color: green;
+  }
+  @media (max-width: 768px) {
+    .chocolate-card {
+      flex-direction: column; 
+    }
+  
+    .chocolate-image {
+      height: 150px;
+    }
+  }
