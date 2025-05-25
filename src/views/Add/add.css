@@ -1,19 +1,19 @@
 .add-page-heading {
     text-align: center;
     margin-bottom: 20px;
-    color: #333; /* Darker heading color */
+    color: #333; 
   }
   
-  .chocolate-form { /* Or medicen-form if you prefer */
+  .chocolate-form { 
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Spacing between form elements */
-    width: 400px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the form */
+    gap: 15px; 
+    width: 400px; 
+    margin: 0 auto; 
     padding: 20px;
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Very light background */
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
   }
   
   .user-input {
@@ -21,55 +21,54 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    outline: none; /* Remove default outline on focus */
+    outline: none;
   }
   
   .user-input:focus {
-    border-color: #007bff; /* Highlight on focus (adjust color) */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle shadow on focus */
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); 
   }
   
-  .chocolate-add-btn { /* Or medicen-add-btn */
+  .chocolate-add-btn { 
     padding: 12px 20px;
-    background-color: #007bff; /* Blue button */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-    margin-top: 15px; /* Space above button */
+    transition: background-color 0.3s ease; 
+    margin-top: 15px; 
   }
   
-  .chocolate-add-btn:hover { /* Or medicen-add-btn */
-    background-color: #0056b3; /* Darker blue on hover */
+  .chocolate-add-btn:hover {
+    background-color: #0056b3; 
   }
   
   .Home-img-addpage {
-    width: 50px;  /* Adjust size as needed */
+    width: 50px; 
     height: auto;
-    position: absolute; /* Or relative, depending on your layout */
-    top: 20px; /* Adjust position */
-    right: 20px; /* Adjust position */
-    cursor: pointer; /* Make it look clickable */
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    cursor: pointer; 
   }
-  
-  /* Responsive adjustments (example) */
+ 
   @media (max-width: 500px) {
-    .chocolate-form { /* Or medicen-form */
-      width: 90%; /* Make form almost full width on smaller screens */
+    .chocolate-form { 
+      width: 90%;
     }
   }
   
-  /* Styles for the toast notifications (optional) */
+
   .Toastify__toast {
     font-size: 14px;
   }
   
   .Toastify__toast-success {
-    background-color: #4caf50; /* Green for success */
+    background-color: #4caf50;
   }
   
   .Toastify__toast-error {
-    background-color: #f44336; /* Red for error */
+    background-color: #f44336;
   }

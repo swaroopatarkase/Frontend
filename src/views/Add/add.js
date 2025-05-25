@@ -11,7 +11,6 @@ function AddChocolate() {
     name: "",
     description: "",
     price: "", 
-    image: null, 
   });
 
   const addChocolate = async () => {
@@ -21,9 +20,6 @@ function AddChocolate() {
       formData.append('name', chocolate.name);
       formData.append('description', chocolate.description);
       formData.append('price', chocolate.price);
-      if (chocolate.image) {
-        formData.append('image', chocolate.image);
-      }
 
 
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/chocolates`, formData, {
@@ -39,7 +35,6 @@ function AddChocolate() {
         name: "",
         description: "",
         price: "",
-        image: null,
       });
 
     } catch (error) {
@@ -47,14 +42,6 @@ function AddChocolate() {
       console.error("Error details:", error); 
     }
   };
-
-  const handleImageChange = (e) => {
-    setChocolate({
-      ...chocolate,
-      image: e.target.files[0], 
-    });
-  };
-
   return (
     <div>
       <h1 className='add-page-heading'> Add Chocolate</h1>
@@ -68,11 +55,11 @@ function AddChocolate() {
           onChange={(e) => setChocolate({ ...chocolate, description: e.target.value })} />
         <input type='number' placeholder='Price' className='user-input' value={chocolate.price}
           onChange={(e) => setChocolate({ ...chocolate, price: e.target.value })} />
-        <input type='file' className='user-input' onChange={handleImageChange} />
       </div>
+      <center>
       <button type='button' className='chocolate-add-btn' onClick={addChocolate}> 
         Add Chocolate
-      </button>
+      </button></center>
       <Link to={"/"}>
         <img src={Homeimg} className='Home-img-addpage' alt='home-icon' />
       </Link>

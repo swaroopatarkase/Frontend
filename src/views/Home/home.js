@@ -10,7 +10,7 @@ function App() {
 
   const loadChocolates = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/chocolates`); 
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}`); 
       console.log(response);
       setChocolates(response.data.data);
     } catch (error) {
@@ -28,14 +28,13 @@ function App() {
       <h1 className='app-heading'> Chocolate World</h1> 
       <div className='chocolatecard-home'> 
         {chocolates.map((chocolate, index) => {
-          const { id, name, description, imageUrl, price } = chocolate;
+          const { id, name, description, price } = chocolate;
           return (
             <Chocolate
               key={id || index}
               id={id}
               name={name}
               description={description}
-              imageUrl={imageUrl}
               price={price} 
             />
           );

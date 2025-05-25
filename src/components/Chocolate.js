@@ -1,40 +1,47 @@
 import React from 'react';
-import "./Chocolate.css"; 
+import './Chocolate.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function Chocolate({ id, name, description, imageUrl, price }) { 
+function Chocolate({ id, name, description, price }) {
   const navigate = useNavigate();
+
+  // Use environment variable or fallback to localhost
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
   const deleteChocolate = async (id) => {
     try {
-      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/chocolates/${id}`); 
-      console.log("Delete Response:", response.data); 
-      window.location.reload(); 
+      const response = await axios.delete(`${API_BASE_URL}/chocolates/${id}`);
+      console.log('Delete Response:', response.data);
+      window.location.reload(); // Refresh the list after deletion
     } catch (error) {
-      console.error("Error deleting chocolate:", error); 
+      console.error('Error deleting chocolate:', error);
     }
   };
 
   return (
-    <div onClick={() => {
-      navigate(`/detail/${id}`); 
-    }}>
-      <div className='chocolate-card'> 
-        <img src={imageUrl} alt={name} className="chocolate-image" /> 
-        <div className='chocolate-details'>
-        <span className='chocolate-id'>{id}</span> 
-          <span className='chocolate-name'> {name}</span> 
+    <div
+      onClick={() => {
+        navigate(`/detail/${id}`);
+      }}
+    >
+      <div className="chocolate-card">
+        <div className="chocolate-details">
+          <span className="chocolate-id">{id}</span>
+          <span className="chocolate-name"> {name}</span>
           <div>
-            <span className='chocolate-description'> Description: {description}</span> 
-            <span className='chocolate-price'>Price: ${price}</span> 
+            <span className="chocolate-description">Description: {description}</span>
+            {price !== undefined && (
+              <span className="chocolate-price">Price: ${price}</span>
+            )}
           </div>
+
           <button
-            type='btn'
-            className='Delete-btn'
+            type="button"
+            className="Delete-btn"
             onClick={(e) => {
+              e.stopPropagation(); // Prevent card click
               deleteChocolate(id);
-              e.stopPropagation(); 
               console.log(`Delete ${name}`);
             }}
           >
@@ -42,11 +49,11 @@ function Chocolate({ id, name, description, imageUrl, price }) {
           </button>
 
           <button
-            type='btn'
-            className='Edit-btn'
+            type="button"
+            className="Edit-btn"
             onClick={(e) => {
-              navigate(`/update/${id}`);
               e.stopPropagation();
+              navigate(`/update/${id}`);
             }}
           >
             Edit
