@@ -14,7 +14,7 @@ function Detail() {
     setError(null);   
 
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/chocolates/${id}`); 
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/${id}`); 
       setChocolate(response.data.data); 
     } catch (err) {
       setError(err.message || "Error fetching details"); 

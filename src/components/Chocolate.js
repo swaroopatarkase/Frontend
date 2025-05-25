@@ -5,15 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 function Chocolate({ id, name, description, price }) {
   const navigate = useNavigate();
-
-  // Use environment variable or fallback to localhost
   const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
   const deleteChocolate = async (id) => {
     try {
-      const response = await axios.delete(`${API_BASE_URL}/chocolates/${id}`);
+      const response = await axios.delete(`${API_BASE_URL}/choclates/${id}`);
       console.log('Delete Response:', response.data);
-      window.location.reload(); // Refresh the list after deletion
+      window.location.reload(); 
     } catch (error) {
       console.error('Error deleting chocolate:', error);
     }
