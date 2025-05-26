@@ -9,7 +9,7 @@ function Chocolate({ id, name, description, price }) {
 
   const deleteChocolate = async (id) => {
     try {
-      const response = await axios.delete(`${API_BASE_URL}/choclates/${id}`);
+      const response = await axios.delete(`${API_BASE_URL}/${id}`);
       console.log('Delete Response:', response.data);
       window.location.reload(); 
     } catch (error) {

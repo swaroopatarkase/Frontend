@@ -22,7 +22,7 @@ function AddChocolate() {
       formData.append('price', chocolate.price);
 
 
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/chocolates`, formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

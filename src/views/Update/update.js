@@ -19,7 +19,7 @@ function UpdateChocolate() {
 
   async function loadChocolateDetails(id) {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/chocolates/${id}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/${id}`);
       const data = response.data.data;
       setChocolate({
         id: data.id,
@@ -44,7 +44,7 @@ function UpdateChocolate() {
       formData.append('name', chocolate.name);
       formData.append('description', chocolate.description);
       formData.append('price', chocolate.price);
-      const response = await axios.put(`${process.env.REACT_APP_API_URL}/chocolates/${id}`, formData, {
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
