@@ -72,7 +72,7 @@ function UpdateChocolate() {
         <input type='number' placeholder='Price' className='user-input' value={chocolate.price}
           onChange={(e) => setChocolate({...chocolate, price: e.target.value })} />
       </div>
-      <button type='button' className='chocolate-add-btn' onClick={updateChocolate}>
+      <button type='button' className='update-add-btn' onClick={updateChocolate}>
         Update Chocolate
       </button>
       <Link to={"/"}>

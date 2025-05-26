@@ -28,7 +28,7 @@ function Chocolate({ id, name, description, price }) {
           <span className="chocolate-id">{id}</span>
           <span className="chocolate-name"> {name}</span>
           <div>
-            <span className="chocolate-description">Description: {description}</span>
+            <span className="chocolate-description">Description: {description}</span><br/>
             {price !== undefined && (
               <span className="chocolate-price">Price: ${price}</span>
             )}

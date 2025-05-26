@@ -1,82 +1,82 @@
 .add-page-heading {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chocolate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.user-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.update-add-btn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.chocolate-add-btn:hover {
+  background-color: #0056b3;
+}
+
+.Home-img-addpage {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.chocolate-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
   .chocolate-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
   }
-  
-  .user-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .user-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-  }
-  
-  .chocolate-add-btn {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 15px;
-  }
-  
-  .chocolate-add-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .Home-img-addpage {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-  }
-  
-  .chocolate-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media (max-width: 500px) {
-    .chocolate-form {
-      width: 90%;
-    }
-  }
-  
-  .Toastify__toast {
-    font-size: 14px;
-  }
-  
-  .Toastify__toast-success {
-    background-color: #4caf50;
-  }
-  
-  .Toastify__toast-error {
-    background-color: #f44336;
-  }
+}
+
+.Toastify__toast {
+  font-size: 14px;
+}
+
+.Toastify__toast-success {
+  background-color: #4caf50;
+}
+
+.Toastify__toast-error {
+  background-color: #f44336;
+}
