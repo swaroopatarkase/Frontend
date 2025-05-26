@@ -31,15 +31,16 @@
 }
 
 .update-add-btn {
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
+  margin-left: 690px;
+  margin-top: 20px;
+   padding: 12px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 .chocolate-add-btn:hover {
