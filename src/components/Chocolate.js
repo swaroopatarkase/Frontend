@@ -30,7 +30,7 @@ function Chocolate({ id, name, description, price }) {
           <div>
             <span className="chocolate-description">Description: {description}</span><br/>
             {price !== undefined && (
-              <span className="chocolate-price">Price: ${price}</span>
+              <span className="chocolate-price">Price: ₹{price}</span>
             )}
           </div>
 
@@ -38,7 +38,7 @@ function Chocolate({ id, name, description, price }) {
             type="button"
             className="Delete-btn"
             onClick={(e) => {
-              e.stopPropagation(); // Prevent card click
+              e.stopPropagation();
               deleteChocolate(id);
               console.log(`Delete ${name}`);
             }}
