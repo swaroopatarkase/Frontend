@@ -1,4 +1,3 @@
-import React from 'react';
 import './Chocolate.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
