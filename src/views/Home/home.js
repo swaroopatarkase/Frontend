@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function App() {
   const [chocolates, setChocolates] = useState([]);
-  const location = useLocation(); // 👈 used to detect navigation state
+  const location = useLocation();
 
   const loadChocolates = async () => {
     try {
@@ -20,12 +20,10 @@ function App() {
     }
   };
 
-  // Initial load
   useEffect(() => {
     loadChocolates();
   }, []);
 
-  // Re-fetch when UpdateChocolate sends "shouldRefresh"
   useEffect(() => {
     if (location.state?.shouldRefresh) {
       loadChocolates();

@@ -46,7 +46,7 @@ function UpdateChocolate() {
       });
 
       toast.success(response?.data?.message || "Chocolate updated successfully!");
-      navigate("/", { state: { shouldRefresh: true } }); // 👈 This tells Home to refresh
+      navigate("/", { state: { shouldRefresh: true } }); 
 
     } catch (error) {
       console.error("Error updating chocolate:", error);
