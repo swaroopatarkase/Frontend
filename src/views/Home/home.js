@@ -11,7 +11,7 @@ function App() {
 
   const loadChocolates = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/chocolates`);
       console.log(response);
       setChocolates(response.data.data);
     } catch (error) {
