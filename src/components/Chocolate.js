@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Chocolate({ id, name, description, price }) {
   const navigate = useNavigate();
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
-
+  axios.get(`${API_BASE_URL}/api/chocolates`);
   const deleteChocolate = async (id) => {
     try {
       const response = await axios.delete(`${API_BASE_URL}/${id}`);
